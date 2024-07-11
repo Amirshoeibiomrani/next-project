@@ -1,3 +1,6 @@
+"use client"
+import { motion } from "framer-motion";
+
  
 export default function Headers() {
     return (
@@ -14,9 +17,12 @@ export default function Headers() {
                     />
                 </svg>
             </div>
-            <div className="title">
+            <motion.div className="title"
+                initial={{y:'-250px'}}
+                animate={{y:'-10px'}}
+            >
                 <h1>ARSO Pizza</h1>
-            </div>
+            </motion.div>
         </header>
     );
 }

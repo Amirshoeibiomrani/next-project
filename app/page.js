@@ -1,3 +1,4 @@
+ "use client"
  import { motion } from "framer-motion";
 import Link from "next/link";
  
@@ -8,15 +9,20 @@ const Home = () => {
 
  
         <motion.div className="home container"
-          animate={{opacity:0.5,marginTop:200}}
+          animate={{opacity:0.2,marginTop:200}}
         >
-            <h2>
+            <motion.h2 
+              animate={{fontSize:'50px', color:"#ff2994"}}
+            >
                 Welcome to ARSO Pizza
-            </h2>
+            </motion.h2>
             <Link href="/base">
-                <button>
+                <motion.button 
+                  initial={{rotateZ:180,scale:0,duration:3000}}
+                 animate={{rotateZ:0,scale:4.5,duration:2000}}
+                 >
                     Create Your Pizza
-                </button>
+                </motion.button>
             </Link>
          </motion.div>
     );
