@@ -3,6 +3,7 @@ import Link from "next/link";
 import {useState} from "react"
 
 export default function Toppings( ) {
+    
     const [pizza, setPizza] = useState({ base: "", toppings: [] })
     let toppings = ['mushrooms', 'peppers', 'onions', 'olives', 'extra cheese', 'tomatoes','cucumbers','eggs'];
 

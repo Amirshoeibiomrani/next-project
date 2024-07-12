@@ -1,9 +1,12 @@
 "use client"
 import Link from "next/link";
 import {useState} from "react"
+import Loading from "../Loading";
 export default function Base() {
+
     const [pizza, setPizza] = useState({ base: "", toppings: [] })
     const bases = ['Classic', 'Thin & Crispy', 'Thick Crust','Chicken','Meat','Vegetables'];
+
     const addBase = (base) => {
         setPizza({ ...pizza, base })
       }
@@ -32,6 +35,7 @@ export default function Base() {
                     <Link href="/toppings">
                         <button>Next</button>
                     </Link>
+                    <Loading />
                 </div>
             )}
 
