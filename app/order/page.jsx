@@ -13,21 +13,15 @@ export default function Order() {
     },4000)
 
     return (
-        <motion.div className="container order" 
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        >
+        <div className="container order" >
             <AnimatePresence>
 {showTitle && (
 
-    <motion.h2
-        exit={{y:'-1000px'}}
-    >Thank you for your order :)</motion.h2>
+    <h2>Thank you for your order :)</h2>
 )}
             </AnimatePresence>
             <p>You ordered a <strong>{pizza.base}</strong> pizza with:</p> 
              {pizza.toppings.map(topping => <div key={topping}>{topping}</div>)}
-        </motion.div>
+        </div>
     )
 }
